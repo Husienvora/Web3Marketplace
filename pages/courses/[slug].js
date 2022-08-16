@@ -90,4 +90,3 @@ export function getStaticProps({ params }) {
 }
 
 Course.Layout = BaseLayout;
-s;

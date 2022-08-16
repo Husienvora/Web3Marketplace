@@ -4,8 +4,12 @@ import { EthRates, WalletBar } from "@components/ui/web3";
 
 const LINKS = [
   {
-    href: "/marketplace",
-    value: "Buy",
+    href: "/marketplace/index1",
+    value: "Buy Courses",
+  },
+  {
+    href: "/marketplace/index2",
+    value: "Buy Nft's",
   },
   {
     href: "/marketplace/courses/owned",

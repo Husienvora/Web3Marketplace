@@ -20,7 +20,7 @@ export default function Navbar() {
                   Home
                 </a>
               </ActiveLink>
-              <ActiveLink href="/marketplace">
+              <ActiveLink href="/marketplace/index1">
                 <a className="font-medium mr-8 text-gray-500 hover:text-gray-900">
                   Marketplace
                 </a>

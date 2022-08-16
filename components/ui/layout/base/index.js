@@ -6,6 +6,7 @@ export default function BaseLayout({ children }) {
     <Web3Provider>
       <div className="max-w-7xl mx-auto px-4">
         <Navbar />
+
         <div className="fit">{children}</div>
       </div>
       <Footer />
