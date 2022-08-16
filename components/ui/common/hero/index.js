@@ -5,7 +5,7 @@ export default function Hero() {
         Welcome to Web3 Marketplace
       </div>
       <div className="mt-6 text-xl font-light text-true-gray-500 antialiased">
-        Buy and sell Nft's and Course's and make a impression in web3.
+        Buy and sell Nft&aposs and Course&aposs and make a impression in web3.
       </div>
       <div className="mt-5 sm:mt-8 flex lg:justify-start">
         <div className="rounded-md shadow">
