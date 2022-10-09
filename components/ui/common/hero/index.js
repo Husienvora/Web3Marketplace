@@ -5,7 +5,7 @@ export default function Hero() {
         Welcome to Web3 Marketplace
       </div>
       <div className="mt-6 text-xl font-light text-true-gray-500 antialiased">
-        Buy and sell Course's on ethereum blockchain .
+        Buy and sell Course&apos;s on ethereum blockchain .
       </div>
       <div className="mt-5 sm:mt-8 flex lg:justify-start">
         <div className="rounded-md shadow">

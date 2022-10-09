@@ -6,7 +6,7 @@ export default function index2() {
   const { _web3Api } = useWeb3();
   const { Marketnft } = useNfts();
   const [Listingprice, setListingprice] = useState();
-  const [Mynfts,setMynfts]=useState()
+  const [Mynfts, setMynfts] = useState();
   const listingprice = async () => {
     let listingPrice = await _web3Api.contractNfts.methods
       .getListingPrice()
@@ -36,49 +36,39 @@ export default function index2() {
     }
   };
 
-  const resellToken=(tokenId,auctionPrice,buyerAddress,listingPrice)=>{
+  const resellToken = async (
+    tokenId,
+    auctionPrice,
+    buyerAddress,
+    listingPrice
+  ) => {
     try {
-      await _web3Api.contractNfts.methods.resellToken(tokenId,auctionPrice,{
-        from:buyerAddress,
-        value:listingPrice,
-      })
-      
+      await _web3Api.contractNfts.methods.resellToken(tokenId, auctionPrice, {
+        from: buyerAddress,
+        value: listingPrice,
+      });
     } catch (error) {
       console.log("Cannot resell token");
-      
     }
+  };
 
-  }
-
-  const fetchMyNFTs=async(buyerAddress)=>{
+  const fetchMyNFTs = async (buyerAddress) => {
     try {
-      await _web3Api.contractNfts.methods.fetchMyNFTs({from:buyerAddress})
-
-
-      
+      await _web3Api.contractNfts.methods.fetchMyNFTs({ from: buyerAddress });
     } catch (error) {
-      console.log("Could not fetch nfts")
-      
+      console.log("Could not fetch nfts");
     }
-  }
+  };
 
-
-  const fetchItemsListed=async(buyerAddress)=>{
-      try {
-      await _web3Api.contractNfts.methods.fetchItemsListed({from:buyerAddress})
-      
+  const fetchItemsListed = async (buyerAddress) => {
+    try {
+      await _web3Api.contractNfts.methods.fetchItemsListed({
+        from: buyerAddress,
+      });
     } catch (error) {
-      console.log("Could not fetch Items Listed")
-      
+      console.log("Could not fetch Items Listed");
     }
-
-  }
-
-
-
-
-
-
+  };
 
   console.log(_web3Api);
   useEffect(() => {
