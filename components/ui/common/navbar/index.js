@@ -22,21 +22,26 @@ export default function Navbar() {
               </ActiveLink>
               <ActiveLink href="/marketplace/index1">
                 <a className="font-medium mr-8 text-gray-500 hover:text-gray-900">
-                  Marketplace
+                  Course Marketplace
                 </a>
               </ActiveLink>
-              <ActiveLink href="/blogs">
+              {/* <ActiveLink href="/marketplace/index2">
+                <a className="font-medium mr-8 text-gray-500 hover:text-gray-900">
+                  Nft Marketplace
+                </a>
+              </ActiveLink> */}
+              {/* <ActiveLink href="/blogs">
                 <a className="font-medium mr-8 text-gray-500 hover:text-gray-900">
                   Blogs
                 </a>
-              </ActiveLink>
+              </ActiveLink> */}
             </div>
             <div className="text-center">
-              <ActiveLink href="/wishlist">
+              {/* <ActiveLink href="/wishlist">
                 <a className="font-medium sm:mr-8 mr-1 text-gray-500 hover:text-gray-900">
                   Wishlist
                 </a>
-              </ActiveLink>
+              </ActiveLink> */}
               {_web3Api.isLoading ? (
                 <Button disabled={true} onClick={_web3Api.connect}>
                   Loading...

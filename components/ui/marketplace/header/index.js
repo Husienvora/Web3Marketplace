@@ -7,10 +7,7 @@ const LINKS = [
     href: "/marketplace/index1",
     value: "Buy Courses",
   },
-  {
-    href: "/marketplace/index2",
-    value: "Buy Nft's",
-  },
+
   {
     href: "/marketplace/courses/owned",
     value: "My Courses",
@@ -18,15 +15,6 @@ const LINKS = [
   {
     href: "/marketplace/courses/managed",
     value: "Manage Courses",
-    requireAdmin: true,
-  },
-  {
-    href: "/marketplace/nfts/owned",
-    value: "Owned nfts",
-  },
-  {
-    href: "/marketplace/nfts/upload",
-    value: "upload nfts",
     requireAdmin: true,
   },
 ];

@@ -38,6 +38,13 @@ export const useAccount = () => {
   };
 };
 
+export const useNfts = () => {
+  const swrRes = enhanceHook(useHooks((hooks) => hooks.useNft)());
+  return {
+    nfts: swrRes,
+  };
+};
+
 export const useAdmin = ({ redirectTo }) => {
   const { account } = useAccount();
   const { requireInstall } = useWeb3();

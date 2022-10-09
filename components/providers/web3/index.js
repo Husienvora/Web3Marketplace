@@ -8,13 +8,20 @@ const Web3Context = createContext(null);
 const setListeners = (provider) => {
   provider.on("chainChanged", (_) => window.location.reload());
 };
-const createWeb3State = ({ web3, provider, contract, isLoading }) => {
+const createWeb3State = ({
+  web3,
+  provider,
+  contract,
+  contractNfts,
+  isLoading,
+}) => {
   return {
     web3,
     provider,
     contract,
+    contractNfts,
     isLoading,
-    hooks: setupHooks({ web3, provider, contract }),
+    hooks: setupHooks({ web3, provider, contract, contractNfts }),
   };
 };
 export default function Web3Provider({ children }) {
@@ -23,6 +30,7 @@ export default function Web3Provider({ children }) {
       web3: null,
       provider: null,
       contract: null,
+      contractNfts: null,
       isLoading: true,
     })
   );
@@ -31,13 +39,16 @@ export default function Web3Provider({ children }) {
       const provider = await detectEtherumProvider();
       if (provider) {
         const web3 = new Web3(provider);
+        const contractNfts = await loadContract("NFTMarketplace", web3);
         const contract = await loadContract("CourseMarketplace", web3);
+        console.log(contractNfts);
         setListeners(provider);
         setWeb3Api(
           createWeb3State({
             web3,
             provider,
             contract,
+            contractNfts,
             isLoading: false,
           })
         );

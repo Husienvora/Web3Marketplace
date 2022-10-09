@@ -8,17 +8,17 @@ module.exports = {
       port: 7545,
       network_id: "*",
     },
-    ropsten: {
+    Goerli: {
       // must be a thunk, otherwise truffle commands may hang in CI
       provider: () =>
         new HDWalletProvider({
           mnemonic: {
             phrase: keys.MNEMONIC,
           },
-          providerOrUrl: `https://ropsten.infura.io/v3/${keys.INFURA_PROJECT_ID}`,
+          providerOrUrl: `https://goerli.infura.io/v3/${keys.INFURA_PROJECT_ID}`,
           addressIndex: 0,
         }),
-      network_id: 3,
+      network_id: 5,
       gas: 5500000, //Gas Limit,How much gas we are willing to spent
       gasPrice: 20000000000, //how much we are willing to spend for unit of gas
       confirmations: 2, //number of block to wait between deployment.
